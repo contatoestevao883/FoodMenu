@@ -44,14 +44,12 @@
                     Tudo certo pode pedir!
                 </button>
 
-                <button data-test="cancel-order-btn" class="cancel">Cancelar</button>
+                <button data-test="cancel-order-btn" class="cancel" onclick="cancelOrder()">Cancelar</button>
 
             </div>
 
         </div>
 
-    
-    
     <div class="header">
         
         <div class="title">FoodMenu</div>
@@ -238,7 +236,7 @@
 
         <div class="footer">
             
-            <a data-test href="#" class="make-order">Selecione os 3 itens para fechar o pedido</a>
+            <a data-test href="#" class="make-order" disabled onclick="makeOrder()">Selecione os 3 itens para fechar o pedido</a>
 
         </div>
 
