@@ -7,9 +7,9 @@ function makeOrder() {
     const overlay = document.querySelector('.overlay');
     overlay.classList.remove('hiden');
 
-    const dishTitle = document.querySelector('.dish .name');
+    const dishTitle = document.querySelector('.meal .name');
     dishTitle.innerHTML = titleDish;
-    document.querySelector('.dish .price');
+    document.querySelector('.meal .price');
 
     const drinkTitle = document.querySelector('.drink .name');
     drinkTitle.innerHTML = titleDrink;
@@ -39,5 +39,6 @@ function makeOrder() {
 }
 
 function cancelOrder() {
-    
+    const overlay = document.querySelector('.overlay');
+    overlay.classList.add('hiden');
 }
