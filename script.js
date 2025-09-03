@@ -42,3 +42,44 @@ function cancelOrder() {
     const overlay = document.querySelector('.overlay');
     overlay.classList.add('hiden');
 }
+
+function selectMeal(selectedMeal) {
+    const previousMeal = document.querySelector('.meals .select');
+    
+    if(previousMeal !== null) {
+        previousMeal.classList.remove('selected');   
+    }
+
+    pratoSelected.classList.add('selected');
+    titleDish = selectedMeal.querySelector('title').innerHTML;
+    dishPrice = selectedMeal.querySelector('price').innerHTML;
+
+}
+
+function selectDrink(selectedDrink) {
+    const previousDrink = document.querySelector('.drinks .select');
+    
+    if(previousDrink  !== null) {
+        previousDrink .classList.remove('selected');   
+    }
+
+    selectedDrink.classList.add('selected');
+    titleDrink = selectedDrink .querySelector('title').innerHTML;
+    drinkPrice = selectedDrink .querySelector('price').innerHTML;
+
+}
+
+function selectDessert(selectedDessert) {
+    const previousDessert = document.querySelector('.desserts .select');
+    
+    if(previous !== null) {
+        previousDessert.classList.remove('selected');   
+    }
+
+    pratoSelected.classList.add('selected');
+    titleDessert = selectedDessert.querySelector('title').innerHTML;
+    dessertPrice = selectedDessert.querySelector('price').innerHTML;
+
+}
+
+
