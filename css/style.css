@@ -94,10 +94,14 @@ body {
 .option .check{
     opacity: 0;
     color: #32B72F;
-    font: 20px;
+    font-size: 20px;
 }
 
-.menu .secao .options .option {
-
+.menu .section .options .option.selected .check {
+    opacity: 1;
 }
 
+.menu .section .options .option.selected {
+    border: 5px solid #32B72F;
+    padding: 13px 9px;
+}
