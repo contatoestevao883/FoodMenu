@@ -43,43 +43,69 @@ function cancelOrder() {
     overlay.classList.add('hiden');
 }
 
+function enableButtonMakeOrder() {
+
+    if (titleDish !== undefined) {
+        
+        if (titleDrink !== undefined) {
+            
+            if (titleDessert !== undefined) {
+                
+                const button = document.querySelector('.make-order');
+
+                button.classList.add('active');
+
+                button.innerHTML = "Fechar Pedido";
+
+                button.removeAttribute('disable');
+            }
+        }
+    }
+}
+
 function selectMeal(selectedMeal) {
-    const previousMeal = document.querySelector('.meals .select');
     
-    if(previousMeal !== null) {
+    const previousMeal = document.querySelector('.meals .selected');
+    
+    if (previousMeal !== null) {
         previousMeal.classList.remove('selected');   
     }
 
-    pratoSelected.classList.add('selected');
-    titleDish = selectedMeal.querySelector('title').innerHTML;
-    dishPrice = selectedMeal.querySelector('price').innerHTML;
+    selectedMeal.classList.add('selected');
+    
+    titleDish = selectedMeal.querySelector('.title').innerHTML;
+    dishPrice = selectedMeal.querySelector('.price').innerHTML;
 
+    enableButtonMakeOrder()
 }
 
 function selectDrink(selectedDrink) {
-    const previousDrink = document.querySelector('.drinks .select');
+    const previousDrink = document.querySelector('.drinks .selected');
     
-    if(previousDrink  !== null) {
+    if (previousDrink  !== null) {
         previousDrink .classList.remove('selected');   
     }
 
     selectedDrink.classList.add('selected');
-    titleDrink = selectedDrink .querySelector('title').innerHTML;
-    drinkPrice = selectedDrink .querySelector('price').innerHTML;
 
+    titleDrink = selectedDrink .querySelector('.title').innerHTML;
+    drinkPrice = selectedDrink .querySelector('.price').innerHTML;
+
+    enableButtonMakeOrder()
 }
 
 function selectDessert(selectedDessert) {
-    const previousDessert = document.querySelector('.desserts .select');
+    const previousDessert = document.querySelector('.desserts .selected');
     
-    if(previous !== null) {
+    if (previousDessert !== null) {
         previousDessert.classList.remove('selected');   
     }
 
-    pratoSelected.classList.add('selected');
-    titleDessert = selectedDessert.querySelector('title').innerHTML;
-    dessertPrice = selectedDessert.querySelector('price').innerHTML;
+    selectedDessert.classList.add('selected');
+    titleDessert = selectedDessert.querySelector('.title').innerHTML;
+    dessertPrice = selectedDessert.querySelector('.price').innerHTML;
 
+    enableButtonMakeOrder()
 }
 
 
