@@ -11,10 +11,10 @@
     <title>FoodMenu</title>
 </head>
 <body>
-    <!----
+
     <div class="overlay hiden">
 
-        <div data-test="confirm-order-modal" class="confirm-order-">
+        <div data-test="confirm-order-modal" class="confirm-order">
 
             <div class="title">Confirme seu pedido</div>
 
@@ -49,7 +49,7 @@
         </div>
 
     </div>
-    -->
+    
 
     <div class="header">
         
@@ -68,7 +68,7 @@
                 
             <div class="options meals">
             
-                <div data-test="meal" class="option dish-chicken">
+                <div data-test="meal" onclick="selectMeal(this)" class="option dish-chicken">
 
                     <img src="assets/images/frango_yin_yang.png" alt="dish-image">
 
@@ -79,12 +79,12 @@
                     <div data-test="item-price" class="price">R$ 14,90</div>
                     
                     <div class="check">
-                        <ion-icon name="checkmark-circle-"></ion-icon>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
 
                 </div>
 
-                <div data-test="meal" class="option dish-meat">
+                <div data-test="meal" onclick="selectMeal(this)" class="option dish-meat">
 
                     <img src="assets/images/premium-beef.jpg" alt="dish-image">
 
@@ -95,12 +95,12 @@
                     <div data-test="item-price" class="price">R$ 17,90</div>
                     
                     <div class="check">
-                        <ion-icon name="checkmark-circle-"></ion-icon>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                     </div> 
 
                 </div>
 
-                <div data-test="meal" class="option dish-fish">
+                <div data-test="meal" onclick="selectMeal(this)" class="option dish-fish" >
 
                     <img src="assets/images/salmão-image.jpg" alt="dish-image">
 
@@ -111,7 +111,7 @@
                     <div data-test="item-price" class="price">R$ 16,90</div>
 
                     <div class="check">
-                        <ion-icon name="checkmark-circle-"></ion-icon>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
 
                 </div>
@@ -126,7 +126,7 @@
                     
             <div class="options drinks">
                     
-                <div data-test="drink" class="option drink-coca">
+                <div data-test="drink" onclick="selectDrink(this)" class="option drink-coca">
                     
                     <img src="assets/images/coca-cola.png">
 
@@ -142,7 +142,7 @@
 
                 </div>
 
-                <div data-test="drink" class="option drink-guarana">
+                <div data-test="drink" onclick="selectDrink(this)" class="option drink-guarana">
 
                     <img src="assets/images/coca-cola.png">
 
@@ -158,7 +158,7 @@
 
                 </div>
 
-                <div data-test="drink" class="option drink-suco">
+                <div data-test="drink" onclick="selectDrink(this)" class="option drink-suco">
 
                     <img src="assets/images/coca-cola.png">
 
@@ -184,7 +184,7 @@
                     
             <div class="options desserts">
                     
-                <div data-test="dessert" class="option dessert-pudim">
+                <div data-test="dessert" class="option dessert-pudim" onclick="selectDessert(this)">
                         
                     <img src="assets/images/pudim.png">
 
@@ -201,7 +201,7 @@
                 </div>
                 
                     
-                <div data-test="dessert" class="option dessert-pudim">
+                <div data-test="dessert" class="option dessert-pudim" onclick="selectDessert(this)">
 
                     <img src="assets/images/pudim.png">
 
@@ -217,7 +217,7 @@
 
                 </div>
 
-                <div data-test="dessert" class="option dessert-pudim">
+                <div data-test="dessert" class="option dessert-pudim" onclick="selectDessert(this)">
 
                     <img src="assets/images/pudim.png">
 
@@ -228,7 +228,7 @@
                     <div data-test="item-price" class="price">8,90</div>
 
                     <div class="check">
-                            ion-icon name="checkmark-circle"></ion-icon>
+                        <ion-icon name="checkmark-circle"></ion-icon>
                     </div>
 
                 </div>
@@ -240,12 +240,14 @@
 
     <div class="footer">
             
-        <a data-test href="#" class="make-order" disabled onclick="makeOrder()">Selecione os 3 itens para fechar o pedido</a>
+        <a data-test="order-btn" href="#" class="make-order" disabled onclick="makeOrder()">
+            Selecione os 3 itens para fechar o pedido
+        </a>
 
     </div>
 
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>   
+     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
-    <script src="scripts/scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
