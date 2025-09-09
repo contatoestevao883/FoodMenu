@@ -5,19 +5,19 @@ let total = 0;
 function makeOrder() {
     
     const overlay = document.querySelector('.overlay');
-    overlay.classList.remove('hiden');
+    overlay.classList.remove('hidden');
 
     const dishTitle = document.querySelector('.meal .name');
     dishTitle.innerHTML = titleDish;
-    document.querySelector('.meal .price');
+    document.querySelector('.meal .price').innerHTML = dishPrice;
 
     const drinkTitle = document.querySelector('.drink .name');
     drinkTitle.innerHTML = titleDrink;
-    document.querySelector('.drink .price');
+    document.querySelector('.drink .price').innerHTML = drinkPrice;
 
     const dessertTitel = document.querySelector('.dessert .name');
     dessertTitel.innerHTML = titleDessert;
-    document.querySelector('.dessert .price');
+    document.querySelector('.dessert .price').innerHTML = dessertPrice;
 
     dishPrice = dishPrice.replace('R$','');
     dishPrice = dishPrice.replace(',', ',');
@@ -40,7 +40,7 @@ function makeOrder() {
 
 function cancelOrder() {
     const overlay = document.querySelector('.overlay');
-    overlay.classList.add('hiden');
+    overlay.classList.add('hidden');
 }
 
 function enableButtonMakeOrder() {
@@ -107,5 +107,3 @@ function selectDessert(selectedDessert) {
 
     enableButtonMakeOrder()
 }
-
-
