@@ -34,7 +34,7 @@ body {
 
 .menu {
     margin:92px auto;
-    padding: 20px;   
+    padding: 22px;   
 }
 
 .menu .section {   
@@ -49,7 +49,7 @@ body {
 
 .menu .section > .title {
     font-family: 'Righteous', cursive;
-    font-size: 26px;
+    font-size: 20px;
     letter-spacing: -0.018em;
 }
 
