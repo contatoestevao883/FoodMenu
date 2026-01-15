@@ -2,7 +2,7 @@
 
 # FoodMenu
 
-O projeto FoodMenu é display mobile de um restaurante que entrega seu pedido em 6 minutos, com funcionalidade de escolher um combo com prato, bebida e sobremesa.
+O projeto FoodMenu é um display mobile com visual de aplicativos de comida utilizados por restaurantes para entregar seu pedidos, com funcionalidade de escolher um combo com prato, bebida e sobremesa.
 
 Principais tecnologias utilizadas: HTML | CSS | JavaScript Vanilla | Git
 
